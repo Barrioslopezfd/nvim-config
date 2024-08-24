@@ -10,9 +10,15 @@ vim.g.maplocalleader = ' '
 --  See `:help hlsearch`
 vim.keymap.set('n', '<Esc>', '<cmd>nohlsearch<CR>')
 
+-- Move lines up/down in Visual Mode
+vim.keymap.set('v', 'J', ":m '>+1<CR>gv=gv")
+vim.keymap.set('v', 'K', ":m '<-2<CR>gv=gv")
+
 -- Go back to tree
 vim.keymap.set('n', '<leader>eq', vim.cmd.Ex, { desc = 'Execute :Ex command' })
 
+-- Rename var in same file
+vim.keymap.set('n', '<leader>rr', [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]], { desc = 'Rename var in same file' })
 -- Diagnostic keymaps
 vim.keymap.set('n', '<leader>q', vim.diagnostic.setloclist, { desc = 'Open diagnostic [Q]uickfix list' })
 
