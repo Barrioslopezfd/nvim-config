@@ -1,4 +1,22 @@
 return {
+  'craftzdog/solarized-osaka.nvim',
+  lazy = true,
+  priority = 1000,
+  init = function()
+    require('solarized-osaka').setup {
+      transparent = true,
+      use_background = false,
+      terminal_colors = true,
+      styles = {
+        comments = { italic = false },
+        keywords = { italic = false },
+      },
+    }
+    vim.cmd.colorscheme 'solarized-osaka'
+  end,
+}
+
+--[[ return {
   { -- You can easily change to a different colorscheme.
     -- Change the name of the colorscheme plugin below, and then
     -- change the command in the config to whatever the name of that colorscheme is.
@@ -29,4 +47,4 @@ return {
       vim.cmd.hi 'Comment gui=none'
     end,
   },
-}
+}   ]]
