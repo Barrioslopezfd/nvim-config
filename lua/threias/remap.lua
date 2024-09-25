@@ -10,14 +10,16 @@ vim.g.maplocalleader = ' '
 --  See `:help hlsearch`
 vim.keymap.set('n', '<Esc>', '<cmd>nohlsearch<CR>')
 
+vim.keymap.set('i', '<C-v>', '<Nop>')
+
 -- Switch between wrap and nowrap
 vim.keymap.set('n', '<leader>w', function()
   vim.opt.wrap = not vim.opt.wrap:get()
 end, { noremap = true })
 
 -- Move lines up/down in Visual Mode
-vim.keymap.set('v', 'J', ":m '>+1<CR>gv=gv")
-vim.keymap.set('v', 'K', ":m '<-2<CR>gv=gv")
+vim.keymap.set('v', '<A-k>', ":m '<-2<CR>gv=gv")
+vim.keymap.set('v', '<A-j>', ":m '>+1<CR>gv=gv")
 
 -- Go back to tree
 vim.keymap.set('n', '<leader>eq', vim.cmd.Ex, { desc = 'Execute :Ex command' })
@@ -36,7 +38,7 @@ vim.keymap.set('n', '<leader>q', vim.diagnostic.setloclist, { desc = 'Open diagn
 vim.keymap.set('t', '<Esc><Esc>', '<C-\\><C-n>', { desc = 'Exit terminal mode' })
 
 -- TIP: Disable arrow keys in normal mode
-vim.keymap.set('n', '<left>', '<cmd>echo "Use h to move!!"<CR>')
-vim.keymap.set('n', '<right>', '<cmd>echo "Use l to move!!"<CR>')
-vim.keymap.set('n', '<up>', '<cmd>echo "Use k to move!!"<CR>')
-vim.keymap.set('n', '<down>', '<cmd>echo "Use j to move!!"<CR>')
+vim.keymap.set('n', '<left>', '<Nop>')
+vim.keymap.set('n', '<right>', '<Nop>')
+vim.keymap.set('n', '<up>', '<Nop>')
+vim.keymap.set('n', '<down>', '<Nop>')
