@@ -18,8 +18,14 @@ vim.keymap.set('n', '<leader>w', function()
 end, { noremap = true })
 
 -- Move lines up/down in Visual Mode
-vim.keymap.set('v', '<A-k>', ":m '<-2<CR>gv=gv")
-vim.keymap.set('v', '<A-j>', ":m '>+1<CR>gv=gv")
+vim.keymap.set('v', '<S-k>', ":m '<-2<CR>gv=gv")
+vim.keymap.set('v', '<S-j>', ":m '>+1<CR>gv=gv")
+
+-- Move lines left/right in Visual Mode
+vim.keymap.set('v', '<', '<gv', { noremap = true, silent = true })
+vim.keymap.set('v', '>', '>gv', { noremap = true, silent = true })
+--vim.keymap.set('v', '<Tab>', '>gv', { noremap = true, silent = true })
+--vim.keymap.set('v', '<S-Tab>', '<gv', { noremap = true, silent = true })
 
 -- Go back to tree
 vim.keymap.set('n', '<leader>eq', vim.cmd.Ex, { desc = 'Execute :Ex command' })

@@ -64,3 +64,8 @@ vim.opt.hlsearch = false
 vim.opt.incsearch = true
 
 vim.opt.termguicolors = true
+
+vim.g.loaded_perl_provider=0
+vim.g.loaded_ruby_provider=0
+vim.g.python3_host_prog='/usr/bin/python3'
+vim.o.background = 'dark'
