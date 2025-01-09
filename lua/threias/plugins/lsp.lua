@@ -41,7 +41,7 @@ return {
 
           map('<leader>ws', require('telescope.builtin').lsp_dynamic_workspace_symbols, '[W]orkspace [S]ymbols')
 
-          map('<leader>rn', vim.lsp.buf.rename, '[R]e[n]ame var acorss files')
+          map('<leader>rn', vim.lsp.buf.rename, '[R]e[n]ame var across files')
 
           map('<leader>ca', vim.lsp.buf.code_action, '[C]ode [A]ction')
 
@@ -104,6 +104,8 @@ return {
       require('mason-tool-installer').setup { ensure_installed = ensure_installed }
 
       require('mason-lspconfig').setup {
+        ensure_installed = {},
+        automatic_installation = false,
         handlers = {
           function(server_name)
             local server = servers[server_name] or {}

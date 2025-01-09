@@ -1,5 +1,3 @@
--- Set to true if you have a Nerd Font installed and selected in the terminal
-vim.g.have_nerd_font = true
 -- Make line numbers default
 vim.opt.number = true
 vim.opt.relativenumber = true
@@ -42,7 +40,7 @@ vim.opt.splitbelow = true
 --  See `:help 'list'`
 --  and `:help 'listchars'`
 vim.opt.list = true
-vim.opt.listchars = { tab = '» ', trail = '·', nbsp = '␣' }
+vim.opt.listchars = { tab = '  ', trail = '·', nbsp = '␣' }
 
 -- Show which line your cursor is on
 vim.opt.cursorline = true
@@ -65,7 +63,7 @@ vim.opt.incsearch = true
 
 vim.opt.termguicolors = true
 
-vim.g.loaded_perl_provider=0
-vim.g.loaded_ruby_provider=0
-vim.g.python3_host_prog='/usr/bin/python3'
+vim.g.loaded_perl_provider = 0
+vim.g.loaded_ruby_provider = 0
+vim.g.python3_host_prog = '/usr/bin/python3'
 vim.o.background = 'dark'

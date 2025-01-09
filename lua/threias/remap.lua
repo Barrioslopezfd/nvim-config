@@ -48,8 +48,4 @@ vim.keymap.set('n', '<left>', '<Nop>')
 vim.keymap.set('n', '<right>', '<Nop>')
 vim.keymap.set('n', '<up>', '<Nop>')
 vim.keymap.set('n', '<down>', '<Nop>')
-vim.keymap.set(
-    "n",
-    "<leader>ee",
-    "oif err != nil {<CR>}<Esc>Oreturn err<Esc>"
-)
+vim.keymap.set('n', '<leader>ee', 'oif err != nil {<CR>}<Esc>Oreturn err<Esc>')
