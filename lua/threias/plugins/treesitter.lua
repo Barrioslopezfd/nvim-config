@@ -14,6 +14,7 @@ return {
         'vim',
         'vimdoc',
         'python',
+        'php',
       },
       sync_install = false,
       -- Autoinstall languages that are not installed
