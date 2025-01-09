@@ -73,6 +73,7 @@ return {
       vim.keymap.set('n', '<leader>sw', builtin.grep_string, {})
       vim.keymap.set('n', '<leader>sg', builtin.live_grep, {})
       vim.keymap.set('n', '<leader><leader>', builtin.buffers, {})
+      vim.keymap.set('n', '<leader>sh', builtin.help_tags, {})
 
       -- Slightly advanced example of overriding default behavior and theme
       vim.keymap.set('n', '<leader>/', function()
