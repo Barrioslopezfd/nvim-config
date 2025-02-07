@@ -30,6 +30,7 @@ return { -- autoformat
       python = { 'isort', 'black', stop_after_first = true },
       go = { 'gofumpt', stop_after_first = true },
       php = { 'php-cs-fixer', stop_after_first = true },
+      blade = { 'blade-formatter' },
       --
       -- you can use 'stop_after_first' to run the first available formatter from the list
       -- javascript = { "prettierd", "prettier", stop_after_first = true },
